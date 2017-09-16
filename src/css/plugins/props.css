@@ -1,0 +1,22 @@
+@custom-media --xs-viewport (max-width:575px);
+@custom-media --sm-viewport (min-width:576px);
+@custom-media --md-viewport (min-width:768px);
+@custom-media --lg-viewport (min-width:992px);
+@custom-media --xl-viewport (min-width:1200px);
+
+:root {
+  --Grid-gutter-size: 1rem;
+
+  --color-primary: #357BD7;
+  --color-secondary: #357BD7;
+  --color-light: #EFF1F3;
+  --color-dark: #212121;
+
+  --color-font: var(--color-dark);
+
+  --space-sm: 0.4em;
+  --space-md: 0.8em;
+  --space-lg: 1.6em;
+
+  --main-font-family: "Open Sans", sans-serif;
+}

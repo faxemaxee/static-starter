@@ -1,0 +1,22 @@
+{
+  "name": "basic-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-suitcss": "^3.0.0",
+    "suitcss": "^3.0.0",
+    "suitcss-base": "^3.0.0",
+    "suitcss-components-grid": "^3.0.3",
+    "suitcss-utils-display": "^1.0.2",
+    "suitcss-utils-flex": "^2.0.0",
+    "suitcss-utils-size": "^2.0.0",
+    "suitcss-utils-text": "^1.0.0"
+  }
+}

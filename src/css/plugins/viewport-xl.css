@@ -1,0 +1,531 @@
+/** Sizes extension */
+/**
+ * @define utilities
+ * Size: breakpoint 3 (large)
+ */
+
+@media (--xl-viewport) {
+
+  /* Proportional widths: breakpoint 3 (large)
+     ======================================================================== */
+
+  /**
+   * Specify the proportional width of an object.
+   * Intentional redundancy build into each set of unit classes.
+   * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+   *
+   * 1. Use `flex-basis: auto` with a width to avoid box-sizing bug in IE10/11
+   *    http://git.io/vllMD
+   */
+
+  .u-xl-size1of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 1 / 12) !important;
+  }
+
+  .u-xl-size1of10 {
+    flex-basis: auto !important;
+    width: 10% !important;
+  }
+
+  .u-xl-size1of8 {
+    flex-basis: auto !important;
+    width: 12.5% !important;
+  }
+
+  .u-xl-size1of6,
+  .u-xl-size2of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 1 / 6) !important;
+  }
+
+  .u-xl-size1of5,
+  .u-xl-size2of10 {
+    flex-basis: auto !important;
+    width: 20% !important;
+  }
+
+  .u-xl-size1of4,
+  .u-xl-size2of8,
+  .u-xl-size3of12 {
+    flex-basis: auto !important;
+    width: 25% !important;
+  }
+
+  .u-xl-size3of10 {
+    flex-basis: auto !important;
+    width: 30% !important;
+  }
+
+  .u-xl-size1of3,
+  .u-xl-size2of6,
+  .u-xl-size4of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 1 / 3) !important;
+  }
+
+  .u-xl-size3of8 {
+    flex-basis: auto !important;
+    width: 37.5% !important;
+  }
+
+  .u-xl-size2of5,
+  .u-xl-size4of10 {
+    flex-basis: auto !important;
+    width: 40% !important;
+  }
+
+  .u-xl-size5of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 5 / 12) !important;
+  }
+
+  .u-xl-size1of2,
+  .u-xl-size2of4,
+  .u-xl-size3of6,
+  .u-xl-size4of8,
+  .u-xl-size5of10,
+  .u-xl-size6of12 {
+    flex-basis: auto !important;
+    width: 50% !important;
+  }
+
+  .u-xl-size7of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 7 / 12) !important;
+  }
+
+  .u-xl-size3of5,
+  .u-xl-size6of10 {
+    flex-basis: auto !important;
+    width: 60% !important;
+  }
+
+  .u-xl-size5of8 {
+    flex-basis: auto !important;
+    width: 62.5% !important;
+  }
+
+  .u-xl-size2of3,
+  .u-xl-size4of6,
+  .u-xl-size8of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 2 / 3) !important;
+  }
+
+  .u-xl-size7of10 {
+    flex-basis: auto !important;
+    width: 70% !important;
+  }
+
+  .u-xl-size3of4,
+  .u-xl-size6of8,
+  .u-xl-size9of12 {
+    flex-basis: auto !important;
+    width: 75% !important;
+  }
+
+  .u-xl-size4of5,
+  .u-xl-size8of10 {
+    flex-basis: auto !important;
+    width: 80% !important;
+  }
+
+  .u-xl-size5of6,
+  .u-xl-size10of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 5 / 6) !important;
+  }
+
+  .u-xl-size7of8 {
+    flex-basis: auto !important;
+    width: 87.5% !important;
+  }
+
+  .u-xl-size9of10 {
+    flex-basis: auto !important;
+    width: 90% !important;
+  }
+
+  .u-xl-size11of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 11 / 12) !important;
+  }
+
+  /* Intrinsic widths
+     ======================================================================== */
+
+  /**
+   * Make an element shrink wrap its content.
+   */
+
+  .u-xl-sizeFit {
+    flex-basis: auto !important;
+  }
+
+  /**
+   * Make an element fill the remaining space.
+   *
+   * 1. Be explicit to work around IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+   *    http://git.io/vllMt
+   */
+
+  .u-xl-sizeFill {
+    flex: 1 1 0% !important; /* 1 */
+    flex-basis: 0% !important; /* 2 */
+  }
+
+  /**
+   * An alternative method to make an element fill the remaining space.
+   * Distributes space based on the initial width and height of the element
+   *
+   * http://www.w3.org/TR/css-flexbox/images/rel-vs-abs-flex.svg
+   */
+
+  .u-xl-sizeFillAlt {
+    flex: 1 1 auto !important;
+    flex-basis: auto !important;
+  }
+
+  /**
+   * Make an element the width of its parent.
+   */
+
+  .u-xl-sizeFull {
+    width: 100% !important;
+  }
+
+}
+
+/* Flex util extension */
+/**
+ * @define utilities
+ * Size: breakpoint xlarge
+ */
+
+@media (--xl-viewport) {
+
+  /* Applies to flex container
+     ======================================================================== */
+
+  /**
+   * Container
+   */
+
+  .u-xl-flex {
+    display: flex !important;
+  }
+
+  .u-xl-flexInline {
+    display: inline-flex !important;
+  }
+
+  /**
+   * Direction: row
+   */
+
+  .u-xl-flexRow {
+    flex-direction: row !important;
+  }
+
+  .u-xl-flexRowReverse {
+    flex-direction: row-reverse !important;
+  }
+
+  /**
+   * Direction: column
+   */
+
+  .u-xl-flexCol {
+    flex-direction: column !important;
+  }
+
+  .u-xl-flexColReverse {
+    flex-direction: column-reverse !important;
+  }
+
+  /**
+   * Wrap
+   */
+
+  .u-xl-flexWrap {
+    flex-wrap: wrap !important;
+  }
+
+  .u-xl-flexNoWrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .u-xl-flexWrapReverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  /**
+   * Align items along the main axis of the current line of the flex container
+   */
+
+  .u-xl-flexJustifyStart {
+    justify-content: flex-start !important;
+  }
+
+  .u-xl-flexJustifyEnd {
+    justify-content: flex-end !important;
+  }
+
+  .u-xl-flexJustifyCenter {
+    justify-content: center !important;
+  }
+
+  .u-xl-flexJustifyBetween {
+    justify-content: space-between !important;
+  }
+
+  .u-xl-flexJustifyAround {
+    justify-content: space-around !important;
+  }
+
+  /**
+   * Align items in the cross axis of the current line of the flex container
+   * Similar to `justify-content` but in the perpendicular direction
+   */
+
+  .u-xl-flexAlignItemsStart {
+    align-items: flex-start !important;
+  }
+
+  .u-xl-flexAlignItemsEnd {
+    align-items: flex-end !important;
+  }
+
+  .u-xl-flexAlignItemsCenter {
+    align-items: center !important;
+  }
+
+  .u-xl-flexAlignItemsStretch {
+    align-items: stretch !important;
+  }
+
+  .u-xl-flexAlignItemsBaseline {
+    align-items: baseline !important;
+  }
+
+  /**
+   * Aligns items within the flex container when there is extra
+   * space in the cross-axis
+   *
+   * Has no effect when there is only one line of flex items.
+   */
+
+  .u-xl-flexAlignContentStart {
+    align-content: flex-start !important;
+  }
+
+  .u-xl-flexAlignContentEnd {
+    align-content: flex-end !important;
+  }
+
+  .u-xl-flexAlignContentCenter {
+    align-content: center !important;
+  }
+
+  .u-xl-flexAlignContentStretch {
+    align-content: stretch !important;
+  }
+
+  .u-xl-flexAlignContentBetween {
+    align-content: space-between !important;
+  }
+
+  .u-xl-flexAlignContentAround {
+    align-content: space-around !important;
+  }
+
+  /* Applies to flex items
+     ======================================================================== */
+
+  /**
+   * Override default alignment of single item when specified by `align-items`
+   */
+
+  .u-xl-flexAlignSelfStart {
+    align-self: flex-start !important;
+  }
+
+  .u-xl-flexAlignSelfEnd {
+    align-self: flex-end !important;
+  }
+
+  .u-xl-flexAlignSelfCenter {
+    align-self: center !important;
+  }
+
+  .u-xl-flexAlignSelfStretch {
+    align-self: stretch !important;
+  }
+
+  .u-xl-flexAlignSelfBaseline {
+    align-self: baseline !important;
+  }
+
+  .u-xl-flexAlignSelfAuto {
+    align-self: auto !important;
+  }
+
+  /**
+   * Change order without editing underlying HTML
+   */
+
+  .u-xl-flexOrderFirst {
+    order: -1 !important;
+  }
+
+  .u-xl-flexOrderLast {
+    order: 1 !important;
+  }
+
+  .u-xl-flexOrderNone {
+    order: 0 !important;
+  }
+
+  /**
+   * Specify the flex grow factor, which determines how much the flex item will
+   * grow relative to the rest of the flex items in the flex container.
+   *
+   * Supports 1-5 proportions
+   *
+   * 1. Provide all values to avoid IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   *
+   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+   *    http://git.io/vllWx
+   */
+
+  .u-xl-flexGrow1 {
+    flex: 1 1 0% !important; /* 1 */
+  }
+
+  .u-xl-flexGrow2 {
+    flex: 2 1 0% !important;
+  }
+
+  .u-xl-flexGrow3 {
+    flex: 3 1 0% !important;
+  }
+
+  .u-xl-flexGrow4 {
+    flex: 4 1 0% !important;
+  }
+
+  .u-xl-flexGrow5 {
+    flex: 5 1 0% !important;
+  }
+
+  /**
+   * Specify the flex shrink factor, which determines how much the flex item
+   * will shrink relative to the rest of the flex items in the flex container.
+   */
+
+  .u-xl-flexShrink0 {
+    flex-shrink: 0 !important;
+  }
+
+  .u-xl-flexShrink1 {
+    flex-shrink: 1 !important;
+  }
+
+  .u-xl-flexShrink2 {
+    flex-shrink: 2 !important;
+  }
+
+  .u-xl-flexShrink3 {
+    flex-shrink: 3 !important;
+  }
+
+  .u-xl-flexShrink4 {
+    flex-shrink: 4 !important;
+  }
+
+  .u-xl-flexShrink5 {
+    flex-shrink: 5 !important;
+  }
+
+  /**
+   * Aligning with `auto` margins
+   * http://www.w3.org/TR/css-flexbox-1/#auto-margins
+   */
+
+  .u-xl-flexExpand {
+    margin: auto !important;
+  }
+
+  .u-xl-flexExpandLeft {
+    margin-left: auto !important;
+  }
+
+  .u-xl-flexExpandRight {
+    margin-right: auto !important;
+  }
+
+  .u-xl-flexExpandTop {
+    margin-top: auto !important;
+  }
+
+  .u-xl-flexExpandBottom {
+    margin-bottom: auto !important;
+  }
+
+  /**
+   * Basis
+   */
+
+  .u-xl-flexBasisAuto {
+    flex-basis: auto !important;
+  }
+
+  .u-xl-flexBasis0 {
+    flex-basis: 0 !important;
+  }
+
+  /*
+   * Shorthand
+   *
+   * Declares all values instead of keywords like 'initial' to work around IE10
+   * https://www.w3.org/TR/css-flexbox-1/#flex-common
+   *
+   * 1. Fixes issue in IE 10 where flex-basis is ignored - https://git.io/vllMt
+   *    This ensures it overrides flex-basis set in other utilities.
+   */
+
+  /*
+   * Sizes the item based on the width/height properties
+   */
+
+  .u-xl-flexInitial {
+    flex: 0 1 auto !important;
+    flex-basis: auto !important; /* 1 */
+  }
+
+  /*
+   * Sizes the item based on the width/height properties, but makes them fully
+   * flexible, so that they absorb any free space along the main axis.
+   */
+
+  .u-xl-flexAuto {
+    flex: 1 1 auto !important;
+    flex-basis: auto !important; /* 1 */
+  }
+
+  /*
+   * Sizes the item according to the width/height properties, but makes the flex
+   * item fully inflexible. Similar to initial, except that flex items are
+   * not allowed to shrink, even in overflow situations.
+   */
+
+  .u-xl-flexNone {
+    flex: 0 0 auto !important;
+    flex-basis: auto !important; /* 1 */
+  }
+
+}
