@@ -7,16 +7,19 @@
 :root {
   --Grid-gutter-size: 1rem;
 
-  --color-primary: #357BD7;
-  --color-secondary: #357BD7;
-  --color-light: #EFF1F3;
+  --color-primary: #357bd7;
+  --color-secondary: #357bd7;
+  --color-light: #eff1f3;
   --color-dark: #212121;
 
   --color-font: var(--color-dark);
 
-  --space-sm: 0.4em;
-  --space-md: 0.8em;
-  --space-lg: 1.6em;
+  --space-sm: 0.9rem;
+  --space-md: 1.8rem;
+  --space-lg: 3.6rem;
 
   --main-font-family: "Open Sans", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
 }

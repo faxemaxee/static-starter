@@ -1,26 +1,32 @@
+
 /** Content container */
+
 .Content {
   margin-left: auto;
   margin-right: auto;
+  overflow-x: visible;
   padding-left: var(--Grid-gutter-size);
   padding-right: var(--Grid-gutter-size);
-  overflow-x: visible;
   position: relative;
   width: 100%;
 }
 
 @media (--sm-viewport) {
-  .Content { max-width: 540px }
+
+  .Content { max-width: 540px; }
 }
 
 @media (--md-viewport) {
-  .Content { max-width: 720px }
+
+  .Content { max-width: 720px; }
 }
 
 @media (--lg-viewport) {
-  .Content { max-width: 960px }
+
+  .Content { max-width: 960px; }
 }
 
 @media (--xl-viewport) {
-  .Content { max-width: 1140px }
+
+  .Content { max-width: 1140px; }
 }

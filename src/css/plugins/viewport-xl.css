@@ -1,8 +1,9 @@
 /** Sizes extension */
+
 /**
- * @define utilities
- * Size: breakpoint 3 (large)
- */
+* @define utilities
+* Size: breakpoint 3 (large)
+*/
 
 @media (--xl-viewport) {
 
@@ -200,6 +201,7 @@
 }
 
 /* Flex util extension */
+
 /**
  * @define utilities
  * Size: breakpoint xlarge
