@@ -25,6 +25,12 @@ gulp.task('suitcss', () => {
     gulp.src('src/css/index.css')
         .pipe(suitcss({
             minify: true,
+            stylelint: {
+                extends: 'stylelint-config-suitcss',
+                rules: {
+                    "order/properties-alphabetical-order": null
+                }
+            },
             use: ['postcss-color-function'],
             'postcss-bem-linter': {
                 componentName: "^[A-Z][a-zA-Z0-9]+$",
