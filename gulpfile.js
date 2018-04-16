@@ -47,6 +47,9 @@ gulp.task('watch', function () {
     gulp.watch('src/js/*.js', ['javascript']);
 });
 
+// Build Task
+gulp.task('build', ['suitcss', 'javascript', 'images']);
+
 // Default Task
 gulp.task('default', ['suitcss', 'javascript', 'watch']);
 

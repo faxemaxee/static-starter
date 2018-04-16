@@ -10,6 +10,7 @@ a suit-css starter kit for static pages – powered by gulp
 ## gulp cmds
 
 * `gulp` – default watcher (css & js)
+* `gulp build` – fully build everything into `dist/`
 * `gulp images` – compile assets (necessary when you add new files to `./src/img`)
 
 ## what it does
