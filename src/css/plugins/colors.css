@@ -1,39 +1,39 @@
 .u-textWhite {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .u-backgroundWhite {
-    background-color: var(--color-white);
+  background-color: var(--color-white);
 }
 
 .u-textPrimary {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .u-backgroundPrimary {
-    background-color: var(--color-primary);
+  background-color: var(--color-primary);
 }
 
 .u-textSecondary {
-    color: var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .u-backgroundSecondary {
-    background-color: var(--color-secondary);
+  background-color: var(--color-secondary);
 }
 
 .u-textLight {
-    color: var(--color-light);
+  color: var(--color-light);
 }
 
 .u-backgroundLight {
-    background-color: var(--color-light);
+  background-color: var(--color-light);
 }
 
 .u-textDark {
-    color: var(--color-dark);
+  color: var(--color-dark);
 }
 
 .u-backgroundDark {
-    background-color: var(--color-dark);
+  background-color: var(--color-dark);
 }

@@ -10,6 +10,7 @@
 @import "./plugins/layout.css";
 @import "./plugins/spacing.css";
 @import "./plugins/typography.css";
+@import "./plugins/colors.css";
 @import "./components/sandbox.css";
 
 * {
