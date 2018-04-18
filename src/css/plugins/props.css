@@ -7,11 +7,12 @@
 :root {
   --Grid-gutter-size: 1rem;
 
-  --color-primary: #357bd7;
-  --color-secondary: #357bd7;
-  --color-light: #eff1f3;
-  --color-dark: #212121;
+  --color-primary: #5b9279;
+  --color-secondary: #8fcb9b;
+  --color-dark: #12130f;
+  --color-light: #eae6e5;
 
+  --color-white: #fff;
   --color-font: var(--color-dark);
 
   --space-xs: 0.4rem;
