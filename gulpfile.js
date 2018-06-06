@@ -5,9 +5,15 @@ const suitcss = require('gulp-suitcss');
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
+const del = require('del');
 
+gulp.task('clean', () => {
+    return del([
+        'dist/**/*.!(php|html|gitkeep)',
+    ])
+})
 
-gulp.task('images', function () {
+gulp.task('images', () => {
     gulp.src('src/img/**/*')
         .pipe(changed('./dist/img'))
         .pipe(imagemin())
@@ -42,7 +48,7 @@ gulp.task('suitcss', () => {
 });
 
 // Watch Files For Changes
-gulp.task('watch', function () {
+gulp.task('watch', () => {
     gulp.watch('src/css/**/*.css', ['suitcss']);
     gulp.watch('src/js/*.js', ['javascript']);
 });

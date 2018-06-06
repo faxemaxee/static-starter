@@ -17,7 +17,8 @@ a suit-css starter kit for static pages – powered by gulp
 
 this serves as a starter kit for static html/css/js pages.
 
-* html structure lives in `dist/` – nothing else!
+* html/php structure lives in `dist/` – nothing else!
+    * if you want to preserve a certain folder structure simply add a `.gitkeep` file to the desired folders
 * css lives in `src/css/` it'll be autocompiled using [`suitcss-preprocessor`](https://github.com/suitcss/preprocessor)
     * make yure every css file you want to use is imported into `src/css/index.css` since we'll do the auto import from there, nowhere else
     * the watcher still watches all changes in `*.css` under `src/css/`
