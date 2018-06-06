@@ -14,6 +14,11 @@ gulp.task('clean', () => {
     ])
 })
 
+gulp.task('assets', function () {
+    gulp.src('src/assets/**/*')
+        .pipe(gulp.dest('./dist/assets'));
+});
+
 gulp.task('images', () => {
     gulp.src('src/img/**/*')
         .pipe(changed('./dist/img'))
@@ -56,20 +61,22 @@ gulp.task('suitcss', () => {
 // Watch Files For Changes
 gulp.task('watch', () => {
     gulp.watch('src/css/**/*.css', ['suitcss']);
-    gulp.watch('src/js/*.js', ['javascript']);
+    gulp.watch('src/js/**/*.js', ['javascript']);
+    gulp.watch('src/assets/**/*.*', ['assets']);
+    gulp.watch('src/img/**/*.*', ['images']);
 });
 
 // Build Task
 gulp.task('build', (cb) => {
     runSequence(
         'clean',
-        ['suitcss', 'javascript', 'images'],
+        ['suitcss', 'javascript', 'assets', 'images'],
         cb
     );
 });
 
 // Default Task
-gulp.task('default', ['suitcss', 'javascript', 'watch']);
+gulp.task('default', ['suitcss', 'javascript', 'assets', 'watch']);
 
 /*
     extend default suit linting
