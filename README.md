@@ -26,5 +26,4 @@ this serves as a starter kit for static html/css/js pages.
     * we'll just bundle everything under `src/js/`
     * there's no minification – for now
 * images live in `src/img/`
-    * no watcher for the images
     * it'll only re-minify images that have been changed

@@ -10,7 +10,10 @@ const runSequence = require('run-sequence');
 
 gulp.task('clean', () => {
     return del([
-        'dist/**/*.!(php|html|gitkeep)'
+        'dist/**/*.!(php|html|gitkeep)',
+        'dist/js',
+        'dist/img',
+        'dist/assets',
     ])
 })
 
@@ -76,7 +79,14 @@ gulp.task('build', (cb) => {
 });
 
 // Default Task
-gulp.task('default', ['suitcss', 'javascript', 'assets', 'watch']);
+gulp.task('default', (cb) => {
+    runSequence(
+        'clean',
+        ['suitcss', 'javascript', 'assets', 'images'],
+        'watch',
+        cb
+    );
+});
 
 /*
     extend default suit linting
