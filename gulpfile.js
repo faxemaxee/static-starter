@@ -6,10 +6,11 @@ const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 const del = require('del');
+const runSequence = require('run-sequence');
 
 gulp.task('clean', () => {
     return del([
-        'dist/**/*.!(php|html|gitkeep)',
+        'dist/**/*.!(php|html|gitkeep)'
     ])
 })
 
@@ -21,9 +22,14 @@ gulp.task('images', () => {
 });
 
 gulp.task('javascript', () => {
-    gulp.src('src/js/*.js')
+    gulp.src('src/js/bundle/**/*.js')
         .pipe(concat('bundle.js'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/js'));
+
+    gulp.src([
+        'src/js/**/*.js',
+        '!src/js/bundle/**/*.js'
+    ]).pipe(gulp.dest('dist/js'));
 })
 
 // exteded suit css watching
@@ -54,7 +60,13 @@ gulp.task('watch', () => {
 });
 
 // Build Task
-gulp.task('build', ['suitcss', 'javascript', 'images']);
+gulp.task('build', (cb) => {
+    runSequence(
+        'clean',
+        ['suitcss', 'javascript', 'images'],
+        cb
+    );
+});
 
 // Default Task
 gulp.task('default', ['suitcss', 'javascript', 'watch']);

@@ -20,6 +20,7 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-suitcss": "^3.0.0",
     "postcss-color-function": "^4.0.0",
+    "run-sequence": "^2.2.1",
     "suitcss": "^3.0.0",
     "suitcss-base": "^3.0.0",
     "suitcss-components-grid": "^3.0.3",
