@@ -14,19 +14,20 @@
   },
   "devDependencies": {
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-changed": "^3.1.0",
+    "gulp": "^4.0.0",
+    "gulp-changed": "^3.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-suitcss": "^3.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-util": "^3.0.8",
     "postcss-color-function": "^4.0.0",
-    "run-sequence": "^2.2.1",
     "suitcss": "^3.0.0",
-    "suitcss-base": "^3.0.0",
-    "suitcss-components-grid": "^3.0.3",
+    "suitcss-base": "^5.0.0",
+    "suitcss-components-grid": "^4.0.0",
+    "suitcss-preprocessor": "^4.0.0",
     "suitcss-utils-display": "^1.0.2",
-    "suitcss-utils-flex": "^2.0.0",
+    "suitcss-utils-flex": "^2.0.1",
     "suitcss-utils-size": "^2.0.0",
-    "suitcss-utils-text": "^1.0.0"
+    "suitcss-utils-text": "^1.0.0",
+    "through2": "^3.0.0"
   }
 }
