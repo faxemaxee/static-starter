@@ -33,13 +33,21 @@ this serves as a starter kit for static html/css/js pages.
 
 * `dist/` – the output, copy this to your server once you are done
     * `**/*.(html|php)` – your page's structure, this works with html and php as well, but be consistent (notice [known issue](#knownissues))
+
     * `disabled.htaccess` – this comes pre-packed with a htaccess to get you up and running fast, for more info refer to the [.htaccess](#htaccess) section the comments in the file itself
+
 * `gulpfile.js/` – the tooling, feel free to dive in ([gulpjs.com](https://gulpjs.com/))
+
 * `src/` – here is where it all comes from, this folder lives in your repo
+
     * `assets/` – everything BUT images, place anything from fonts to downloadable PDFs right here
+    
     * `css` – all the styles, this is using [SUITCSS](https://suitcss.github.io/), make sure every css file you want to use is imported into `css/index.css`
+
     * `img/` – put all images here, they will be optimized using [imagemin](https://github.com/imagemin/imagemin)
+
     * `js/bundle/` – all js files in here will be concatinated to one big `bundle.min.js`
+
     * `js/` – everything **not** placed in `js/bundle` will be simply copied
 
 ## htaccess
