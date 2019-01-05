@@ -13,6 +13,8 @@ function watch() {
     gulp.watch('src/js/**/*.js', js);
 }
 
+const build = gulp.series(clean, gulp.parallel(css, js, images, assets));
+
 exports.assets = assets;
 exports.js = js;
 exports.clean = clean;
@@ -20,5 +22,5 @@ exports.css = css;
 exports.images = images;
 exports.watch = watch;
 
-exports.build = gulp.series(clean, gulp.parallel(css, js, images));
-exports.default = gulp.series(gulp.parallel(css, js), watch);
+exports.build = build
+exports.default = gulp.series(build, watch);
