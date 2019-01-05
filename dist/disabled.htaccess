@@ -1,0 +1,80 @@
+
+AddDefaultCharset UTF-8
+
+# ----------------------------------------------------------------------
+# Rewrite
+# ----------------------------------------------------------------------
+RewriteEngine On
+
+# redirect */index.(php|html) to just */
+RewriteCond %{THE_REQUEST} ^GET.*index\.(php|html) [NC]
+RewriteRule (.*?)index\.(php|html)/*(.*) /$1$2 [R=301,NE,L]
+
+# remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# remove .html extension (does not work with "remove .php extension", only use one of them)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# remove .php extension (does not work with "remove .html extension", only use one of them)
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# reidrect HTTP to HTTPS
+# RewriteCond %{HTTPS} !on
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ----------------------------------------------------------------------
+# Basic Headers
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options: nosniff
+  Header set X-XSS-Protection: "1; mode=block"
+  Header set X-Frame-Options: SAMEORIGIN
+  Header unset X-Powered-By
+
+  <FilesMatch ".(js|css|xml|gz|html|png|jpg|ttf)$">
+      Header append Vary: Accept-Encoding
+  </FilesMatch>
+
+  <FilesMatch "\.(ttf|otf|eot)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Expires headers (for better cache control)
+# ----------------------------------------------------------------------
+# One year for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico|svg|ttf)$">
+  Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+
+# One month for css and js
+<filesMatch ".(css|js)$">
+  Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+
+# ----------------------------------------------------------------------
+# COMPRESS
+# ----------------------------------------------------------------------
+##GZIP DEFLATE
+<IfModule mod_mime.c>
+  AddType application/x-javascript .js
+  AddType text/css .css
+  AddType image/svg+xml svg
+  AddType image/svg+xml svgz
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon application/javascript
+  <IfModule mod_setenvif.c>
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  </IfModule>
+  <IfModule mod_headers.c>
+    Header append Vary User-Agent env=!dont-vary
+  </IfModule>
+</IfModule>

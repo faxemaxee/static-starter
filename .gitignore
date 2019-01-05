@@ -4,6 +4,7 @@
 dist/**/*.*
 !dist/**/*.html
 !dist/**/*.php
+!dist/**/*.htaccess
 
 ### JetBrains ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
