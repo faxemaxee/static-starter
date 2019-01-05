@@ -4,7 +4,7 @@ const del = require('del');
 
 function clean() {
     return del([
-        'dist/**/*.!(php|html|gitkeep|ttf)',
+        'dist/**/*.!(php|html|gitkeep|htaccess)',
         'dist/js',
         'dist/img',
         'dist/assets',

@@ -8,7 +8,7 @@ RewriteEngine On
 
 # redirect */index.(php|html) to just */
 RewriteCond %{THE_REQUEST} ^GET.*index\.(php|html) [NC]
-RewriteRule (.*?)index\.(php|html)/*(.*) /$1$2 [R=301,NE,L]
+RewriteRule (.*?)index\.(php|html)/*(.*) /$1$3 [R=301,NE,L]
 
 # remove trailing slash
 RewriteCond %{REQUEST_FILENAME} !-d
