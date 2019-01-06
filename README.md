@@ -55,4 +55,4 @@ this serves as a starter kit for static html/css/js pages.
 
 ## known issues
 
-1. when using the "remove file extension" rule in `.htaccess` you cannot access `index` files placed in any subdirectory
+1. by deactivating apache's trailing slashes you might encouter situations where referencing (e.g) images or other ressources cause a 404. You then have to reference them absolutely from the page's root directory

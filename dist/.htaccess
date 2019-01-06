@@ -1,28 +1,34 @@
 
 AddDefaultCharset UTF-8
 
+# turn off apache's trailing slashes
+DirectorySlash Off
+
 # ----------------------------------------------------------------------
 # Rewrite
 # ----------------------------------------------------------------------
 RewriteEngine On
 
-# redirect */index.(php|html) to just */
-RewriteCond %{THE_REQUEST} ^GET.*index\.(php|html) [NC]
-RewriteRule (.*?)index\.(php|html)/*(.*) /$1$3 [R=301,NE,L]
+# redirects "*/index.html" to just "*/"
+RewriteCond %{THE_REQUEST} ^GET.*index\.html [NC]
+RewriteRule (.*?)index\.html(.*) /$1$2 [R=301,NE,L]
 
 # remove trailing slash
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)/$ /$1 [L,R=301]
 
 # remove .html extension (does not work with "remove .php extension", only use one of them)
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# remove .php extension (does not work with "remove .html extension", only use one of them)
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# remove .html extension (does not work with "remove .php extension", only use one of them)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^([^\.]+)$ $1/index.html [NC,L]
 
-# reidrect HTTP to HTTPS
+# redirect HTTP to HTTPS
 # RewriteCond %{HTTPS} !on
 # RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
