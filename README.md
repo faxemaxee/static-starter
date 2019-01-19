@@ -46,6 +46,10 @@ this serves as a starter kit for static html/css/js pages.
 
     * `img/` – put all images here, they will be optimized using [imagemin](https://github.com/imagemin/imagemin)
 
+    * `img/uncompressed` – any images you do not want to process using imagemin can go here (e.g. animated PNGs will be stripped of their animation when using imagemin).
+    
+        :warning: **ATTENTION:** this will be merged into images **without** the `uncompressed` folder so keep an eye on your file/folder naming in any case where it'll overwrite files with the same name the uncompressed version will be chosen
+
     * `js/bundle/` – all js files in here will be concatinated to one big `bundle.min.js`
 
     * `js/` – everything **not** placed in `js/bundle` will be simply copied

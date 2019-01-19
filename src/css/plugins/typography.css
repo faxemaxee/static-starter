@@ -33,18 +33,18 @@ h4,
 .h4 {
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-normal);
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 h5,
 .h5 {
   font-size: var(--font-size-h5);
-  line-height: 1;
+  line-height: 1.2;
 }
 
 h6 {
   font-size: var(--font-size-h6);
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .highlighted {
